@@ -47,7 +47,8 @@ const Canvas = ({
           element: tool,
         },
       ]);
-    } else {
+    } 
+    else {
       setElements((prevElements) => [
         ...prevElements,
         { offsetX, offsetY, stroke: color, element: tool },
