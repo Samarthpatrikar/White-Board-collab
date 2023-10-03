@@ -68,6 +68,7 @@ const Canvas = ({
         canvasRef.current.height
       );
     }
+
     elements.forEach((ele, i) => {
       if (ele.element === "rect") {
         roughCanvas.draw(
@@ -156,7 +157,7 @@ const Canvas = ({
   return (
     <div
       className="col-md-8 overflow-hidden border border-dark px-0 mx-auto mt-3"
-      style={{ height: "500px" }}
+      style={{ height: window.innerHeight,width:window.innerWidth }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

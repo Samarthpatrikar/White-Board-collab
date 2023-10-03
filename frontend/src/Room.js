@@ -123,7 +123,7 @@ const Room = ({ userNo, socket, setUsers, setUserNo }) => {
           >
             Undo
           </button>
-          &nbsp;&nbsp;
+          
           <button
             type="button"
             className="btn btn-outline-primary ml-1"

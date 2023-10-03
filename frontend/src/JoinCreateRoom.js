@@ -21,10 +21,11 @@ const JoinCreateRoom = ({ uuid, setUser, setRoomJoined }) => {
     });
     setRoomJoined(true);
   };
+  
   const handleJoinSubmit = (e) => {
     e.preventDefault();
     if (!joinName) return toast.dark("Please enter your name!");
-
+    if(!joinRoomId) return toast.dark("Please Enter a Room Id!")
     setUser({
       roomId: joinRoomId,
       userId: uuid(),
@@ -77,7 +78,7 @@ const JoinCreateRoom = ({ uuid, setUser, setRoomJoined }) => {
                 >
                   Generate
                 </button>
-                &nbsp;&nbsp;
+                
                 <CopyToClipboard
                   text={roomId}
                   onCopy={() => toast.success("Room Id Copied To Clipboard!")}

@@ -26,7 +26,7 @@ const App = () => {
 
   const uuid = () => {
     var S4 = () => {
-      return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+      return (((1 + Math.random()) * 0x10000) | 0).toString(10).substring(1);
     };
     return (
       S4() +
@@ -43,7 +43,9 @@ const App = () => {
       S4()
     );
   };
-
+  
+  // This is being executed everytime we click on either create or join room
+  
   useEffect(() => {
     if (roomJoined) {
       socket.emit("user-joined", user);
